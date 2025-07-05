@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const products = [
@@ -91,9 +92,16 @@ const Products = () => {
               All our products undergo rigorous testing at internationally accredited laboratories to ensure 
               compliance with importing country requirements.
             </p>
-            <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
-              Download Quality Certificates
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/products">
+                <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+                  View Product Details
+                </button>
+              </Link>
+              <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+                Download Quality Certificates
+              </button>
+            </div>
           </div>
         </div>
       </div>
